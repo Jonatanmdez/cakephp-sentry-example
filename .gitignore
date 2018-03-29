@@ -5,7 +5,8 @@
 /cakephp/logs/*
 /cakephp/tmp/*
 /cakephp/vendor/*
-
+/cakephp/*.sqlite
+/cakephp/composer.lock
 
 
 # JetBrains, aka PHPStorm, IntelliJ IDEA
