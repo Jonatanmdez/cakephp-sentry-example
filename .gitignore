@@ -1,0 +1,13 @@
+# CakePHP specific files #
+##########################
+/cakephp/config/app.php
+/cakephp/config/.env
+/cakephp/logs/*
+/cakephp/tmp/*
+/cakephp/vendor/*
+
+
+
+# JetBrains, aka PHPStorm, IntelliJ IDEA
+.idea/*
+
