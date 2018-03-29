@@ -216,7 +216,6 @@ if (Configure::read('debug')) {
 }
 
 
-
-
-
 Plugin::load('Connehito/CakeSentry', ['bootstrap' => true]);
+Plugin::load('Migrations');
+Plugin::load('BootstrapUI');
