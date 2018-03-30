@@ -1,0 +1,4 @@
+Events
+
+
+$raven->setRelease(shell_exec('git rev-parse HEAD'));
