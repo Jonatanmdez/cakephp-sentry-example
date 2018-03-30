@@ -343,15 +343,11 @@ return [
     ],
 
 
-    'Error'=>[
-        'handlers' => [
-            // *Can* be the class name, not-namespaced
-            // The namespace will be "interpolated" in such cases
-            'SentryHandler' => ['dsn'=> getenv('SENTRY_DSN'),
-            ],
-            // Can also include the full namespace
-        ],
-    ],
+
+
+    'Sentry' => [
+        'dsn' => getenv('SENTRY_DSN')
+    ]
 
 
 ];
