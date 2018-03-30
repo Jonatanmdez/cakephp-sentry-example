@@ -37,7 +37,7 @@ echo "date.timezone = \"${LOCALTIME}\"" >> $PHP_INI_DIR/conf.d/00-default.ini
 sed -i "s/80/${PORT}/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
 
 
-chmod -R 777 tmp/
+mkdir tmp/
 
 #Migrations
 su  "www-data" -s /bin/sh  -c " bin/cake migrations migrate "
