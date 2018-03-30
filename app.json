@@ -1,0 +1,17 @@
+{
+	"name": "Cakephp-sentry-example",
+	"description": "Cakephp-sentry-example",
+	"repository": "https://github.com/jonatanmdez/cakephp-sentry-example",
+	"website": "http://getsentry.com",
+	"keywords": [
+		"logging",
+		"error"
+	],
+	"addons": [],
+	"env": {},
+	"scripts": {
+		"dokku": {
+
+    }
+  }
+}

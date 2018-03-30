@@ -38,11 +38,13 @@ use Cake\Core\Plugin;
 use Cake\Database\Type;
 use Cake\Datasource\ConnectionManager;
 use Cake\Error\ErrorHandler;
+use Cake\Event\EventManager;
 use Cake\Http\ServerRequest;
 use Cake\Log\Log;
 use Cake\Mailer\Email;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+use App\Event\SentryErrorContext;
 
 /**
  * Uncomment block of code below if you want to use `.env` file during development.
@@ -219,3 +221,6 @@ if (Configure::read('debug')) {
 Plugin::load('Connehito/CakeSentry', ['bootstrap' => true]);
 Plugin::load('Migrations');
 Plugin::load('BootstrapUI');
+
+
+EventManager::instance()->on(new SentryErrorContext());

@@ -22,6 +22,8 @@ class PostsController extends AppController
     {
         $posts = $this->paginate($this->Posts);
 
+
+
         $this->set(compact('posts'));
     }
 
@@ -37,6 +39,8 @@ class PostsController extends AppController
         $post = $this->Posts->get($id, [
             'contain' => []
         ]);
+
+	    throw new \Exception ("Hola mundo");
 
         $this->set('post', $post);
     }
