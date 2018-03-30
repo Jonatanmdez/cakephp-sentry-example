@@ -14,7 +14,7 @@ RUN sed -ri -e 's!/var/www/!${HTTPD__DocumentRoot}!g' /etc/apache2/apache2.conf 
 
 WORKDIR /var/www/html/
 COPY cakephp .
-RUN composer update --no-dev
+RUN composer update
 COPY docker-entrypoint.sh /entrypoint.sh
 
 COPY cakephp/config/app_docker.php config/app.php
