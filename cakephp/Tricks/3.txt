@@ -1,3 +1,18 @@
+App PHP
+
+'Sentry' => [
+	    'dsn' => 'https://75e5f373ce5a49099d02ce600fc98a94:81fa29cf143c4d9d907b6e8534a0fdd5@sentry.dokku.jonatanmc.es/2',
+        'options' => [
+            'send_callback' => function ($data) {
+                $request = \Cake\Http\ServerRequestFactory::fromGlobals();
+                $session = $request->getSession();
+                $session->write('last_event_id', $data['event_id']);
+            }
+        ],
+    ]
+
+
+
  Template
 
 
