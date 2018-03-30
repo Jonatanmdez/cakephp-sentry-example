@@ -27,16 +27,16 @@ class SentryErrorContext implements EventListenerInterface
 
 		/* @var Raven_Client $raven */
 
-
-
 		$raven->setRelease(shell_exec('git rev-parse HEAD'));
 
 
-
-
 		$raven->user_context([
-			'ip_address' => $request->clientIp()
+			'ip_address' => $request->clientIp(),
+            'username'=>'jonatanmdez',
+            'email'=>'jonatanmenendez@gmail.com',
 		]);
+
+
 		$raven->tags_context([
 			'app_version' => $request->getHeaderLine('App-Version') ?: 1.0,
 		]);

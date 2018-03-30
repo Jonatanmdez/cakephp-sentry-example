@@ -41,6 +41,8 @@ class ErrorController extends AppController
      */
     public function beforeFilter(Event $event)
     {
+        $sentryLastEventId = $this->request->getSession()->read('last_event_id');
+        $this->set('sentry_last_event_id', $sentryLastEventId);
     }
 
     /**
