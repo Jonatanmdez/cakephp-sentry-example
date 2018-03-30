@@ -21,15 +21,17 @@ class SentryErrorContext implements EventListenerInterface
 
 
 		$request = $event->getSubject()->getRequest();
-		$request->trustProxy = true;
 
-		$raven = $event->getSubject()->getRaven();
+		if($request){
+            $request->trustProxy = true;
 
-		/* @var Raven_Client $raven */
+            $raven = $event->getSubject()->getRaven();
+
+            /* @var Raven_Client $raven */
 
 
 
-
+        }
 		return [
 			'extra' => [
 				'foo' => 'bar',
