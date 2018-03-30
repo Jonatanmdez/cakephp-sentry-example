@@ -1,8 +1,8 @@
 FROM optimizaclick/apache-php7.1-prod
 
 
-RUN apt-get update && apt-get install -y libbz2-dev
-RUN docker-php-ext-install bz2
+RUN apt-get update && apt-get install -y libbz2-dev libcurl3-dev
+RUN docker-php-ext-install bz2 curl
 
 ENV HTTPD__DocumentRoot='/var/www/html/'
 ENV HTTPD_a2enmod='rewrite expires deflate'
