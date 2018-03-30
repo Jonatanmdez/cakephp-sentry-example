@@ -11,6 +11,7 @@ ENV HTTPD_a2enmod='rewrite expires deflate'
 RUN sed -ri -e 's!/var/www/html!${HTTPD__DocumentRoot}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${HTTPD__DocumentRoot}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
+RUN rm /usr/local/etc/php/conf.d/error_reporting.ini
 
 WORKDIR /var/www/html/
 COPY cakephp .
