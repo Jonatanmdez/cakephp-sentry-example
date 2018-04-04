@@ -1,4 +1,6 @@
 Events
 
+EventManager::instance()->on(new SentryErrorContext());
+
 
 $raven->setRelease(shell_exec('git rev-parse HEAD'));
