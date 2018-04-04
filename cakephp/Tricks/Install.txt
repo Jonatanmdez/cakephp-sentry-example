@@ -1,4 +1,9 @@
  APP
+ 
+ 
+ Plugin::loadAll();
+ 
+ 
 
  'Sentry' => [
 	    'dsn' => 'https://75e5f373ce5a49099d02ce600fc98a94:81fa29cf143c4d9d907b6e8534a0fdd5@sentry.dokku.jonatanmc.es/2',
