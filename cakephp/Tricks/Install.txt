@@ -1,7 +1,7 @@
  APP
  
  
- Plugin::loadAll();
+Plugin::load('Connehito/CakeSentry', ['bootstrap' => true]);
  
  
 
